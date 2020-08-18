@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'auth',
+    loadChildren: () => import('./AuthModule/auth-routing-module/auth-routing-module.module').then( m => m.AuthRoutingModuleModule)
+  },
+  {
+    path: 'farmer',
+    loadChildren: () => import('./FarmersModule/farmers-routing/farmers-routing.module').then( m => m.FarmersRoutingModule)
+  },
+  {
+    path: 'gov-lgu',
+    loadChildren: () => import('./GovLguModule/govrouting/govrouting.module').then( m => m.GovroutingModule)
+  },
 ];
 
 @NgModule({

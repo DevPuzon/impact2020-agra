@@ -1,0 +1,48 @@
+<ion-content >   
+  <ion-row >
+    <ion-col size="12" size-sm="12" size-md="8" size-lg="8"
+      offset="0" offset-sm="0" offset-md="2" offset-md="2">
+      <div class="ion-no-padding">
+        <div class="main">
+          <div class="chat-box">
+            <div class="message-area">
+              <div class="message" *ngFor="let chat of chats">
+                <div  [ngClass]="chat.from === myuid ? 'message outgoing':'message incoming'">
+                  <img loading="lazy"  
+                    [hidden]="chat.files == undefined"
+                    *ngFor="let file of chat.files"
+                  class="imgview"
+                  src="{{file}}" [routerLink]="['/main/viewimage/',file]" >
+                  <p [hidden]="chat.message == '' || chat.message == undefined" id="{{chat.docId}}"> 
+                    {{chat.message}} 
+                  </p>
+                </div>   
+              </div>
+            </div>  
+          </div> 
+        </div>
+      </div>  
+    </ion-col>
+  </ion-row> 
+</ion-content>  
+
+<ion-footer class="ion-no-border"
+style="margin-bottom: 63px;"> 
+  <ion-row >
+    <ion-col size="12" size-sm="12" size-md="8" size-lg="8"
+      offset="0" offset-sm="0" offset-md="2" offset-md="2">
+    
+      <ion-item> 
+        <ion-input  
+        type="text"
+          name="message" id="message"
+        placeholder="Send a message..."></ion-input>
+    
+        <ion-icon name="send" button   slot="end"></ion-icon>
+      </ion-item>   
+    </ion-col>
+  </ion-row> 
+</ion-footer>
+
+ 
+ 
