@@ -1,3 +1,135 @@
-<p>
-  register works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Register</ion-title>
+    <ion-buttons slot="start">
+      <ion-button onclick="window.history.back()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> 
+<ion-content>
+  <ion-row>
+    <ion-col size="12" size-sm="12" size-md="8" size-lg="8"
+    offset="0" offset-sm="0" offset-md="2" offset-lg="2"> 
+      <input  id="fileUploadRegister"  type="file"
+      style="display:none"
+      accept=".png, .jpg, .jpeg"> 
+    <ion-list>  
+      <div class="super-center"
+      style="margin-top:15px;
+      margin-bottom:15px;">
+      <div  
+        style="position: relative;
+        display: inline-block ;width: 120px;
+        margin-right: 10px;"> 
+          <img  src="data:image/png;base64,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"
+          style=" 
+            position: absolute;
+            bottom: 0px;
+            right: -14px;
+            cursor: pointer;" />
+          <ion-avatar  button
+          style="height: 130px;
+          width: 130px;cursor: pointer;">
+            <img  src="data:image/png;base64,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">
+          </ion-avatar>
+        </div>  
+      </div>
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email"  placeholder="juandelacurz@gmail.com"></ion-input>
+      </ion-item>
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input    type="{{typePass}}"></ion-input>
+        <ion-icon class="passwordIcon" slot="end" name="{{imgPass}}" (click)="onClickShow()"></ion-icon>
+      </ion-item>
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">Fullname</ion-label>
+        <ion-input  value="Juan dela cruz"></ion-input>
+      </ion-item>
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">Farm address</ion-label>
+        <ion-input  value="Mission Rd to Dugo - San Vicente Rd in Santa Teresita"></ion-input>
+      </ion-item>
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">Contact number</ion-label>
+        <ion-input  value="+63912345678"></ion-input>
+      </ion-item>
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input  value="juandelacruz@email.com"></ion-input>
+      </ion-item>
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">Land lord name</ion-label>
+        <ion-input  value="Teresita Cruz"></ion-input>
+      </ion-item>
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">Farm Hectare 1:</ion-label>
+        <ion-input value="Crops 1" ></ion-input>
+      </ion-item> 
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">Number of harvest in a year?</ion-label>
+        <ion-input  value="540 sacks"></ion-input>
+      </ion-item>
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">Estimated yearly value</ion-label>
+        <ion-input value="200,000 php" ></ion-input>
+      </ion-item>
+      
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">Farm Hectare 1:</ion-label>
+        <ion-input value="Crops 2" ></ion-input>
+      </ion-item>  
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">Number of harvest in a year?</ion-label>
+        <ion-input value="400 sacks" ></ion-input>
+      </ion-item>
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">Estimated yearly value</ion-label>
+        <ion-input value="150,000 php" ></ion-input>
+      </ion-item>
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">What are the equipment you need?</ion-label>
+        <ion-input value="Walis tambo" ></ion-input>
+      </ion-item>
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">What are the farm fertilizer you need?</ion-label>
+        <ion-input value="Tae ng kalabaw" ></ion-input>
+      </ion-item>
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">What type of training you need?</ion-label>
+        <ion-input value="Farming" ></ion-input>
+      </ion-item>
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">Do you have a standing loan?</ion-label>
+        <ion-select placeholder="Yes">
+          <ion-select-option value="f">Yes</ion-select-option>
+          <ion-select-option value="m">No</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">How much? </ion-label>
+        <ion-input value="500,000 php" ></ion-input>
+      </ion-item>
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">Do you need a loan?</ion-label> 
+        <ion-select placeholder="Yes">
+          <ion-select-option value="f">Yes</ion-select-option>
+          <ion-select-option value="m">No</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item color="transparent" class="ion-no-padding">
+        <ion-label position="floating">How much? </ion-label>
+        <ion-input value="350,000" ></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button
+      style="width: 100%;"
+      size="default" >Register</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>
+ 

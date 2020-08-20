@@ -11,7 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { CommunityComponent } from '../community/community.component';
 import { ChatContentComponent } from '../chat-content/chat-content.component';
-
+ 
 
 @NgModule({
   imports: [
@@ -19,7 +19,7 @@ import { ChatContentComponent } from '../chat-content/chat-content.component';
     FormsModule, 
     ReactiveFormsModule,
     IonicModule,  
-    FarmersRoutingRoutingModule
+    FarmersRoutingRoutingModule,
   ], 
   declarations: [ChatContentComponent,
     CommunityComponent,SurveyComponent,FarmerMainComponent

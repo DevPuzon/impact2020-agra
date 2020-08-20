@@ -1,13 +1,19 @@
 
+
   <ion-header >
     <ion-toolbar> 
       <img slot="start" style="height: 50px;" src="https://scontent.fmnl6-1.fna.fbcdn.net/v/t1.15752-9/s2048x2048/117769762_2435409836763791_4676976137666678356_n.png?_nc_cat=105&_nc_sid=b96e70&_nc_eui2=AeFphmMv09MX1ywdV8XCZQFZsfwI5oXjZQmx_AjmheNlCY69e4P6j4QuSJl1R7V1XnyPbaxBRBOH8BN76xtcZaFD&_nc_ohc=xM8g2Bya5DgAX_cXLHH&_nc_ht=scontent.fmnl6-1.fna&oh=3566a9f254b413e3b3a708c5430871ee&oe=5F60DA46" alt="">
-      <ion-item slot="end">
+      <ion-item slot="end" lines="none" detail="false">
         <ion-buttons>
-          <ion-button fill="outline" color="primary" [routerLink]="['/gov-lgu/t']">
+          <!-- <ion-button fill="outline" color="primary"  >
             Business
-          </ion-button>
-          <ion-button fill="outline" color="primary">
+          </ion-button> -->
+         
+          <ion-chip color="warning" >
+            <ion-icon name="add" ></ion-icon> 
+            <ion-label><b>Agra points </b>200</ion-label> 
+          </ion-chip>
+          <ion-button fill="outline" color="primary" [routerLink]="['/gov-lgu/t']" >
             Gov/Lgu
           </ion-button>
         </ion-buttons>
@@ -34,5 +40,4 @@
       <ion-label>Account</ion-label>
     </ion-tab-button> 
   </ion-tab-bar> 
-</ion-tabs>
-   
+</ion-tabs> 

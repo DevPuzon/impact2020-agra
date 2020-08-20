@@ -10,9 +10,12 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { GatepageComponent } from './gatepage/gatepage.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,LandingPageComponent,
+    GatepageComponent],
   entryComponents: [],
   imports: [BrowserModule,
      IonicModule.forRoot(), 

@@ -1,14 +1,14 @@
 <ion-content  >
   <div> 
     <ion-label class="ion-text-center" > 
-    <h1><b>Welcome to Agritrade</b></h1> 
+    <h1><b>Welcome to Agra</b></h1> 
     <ion-item color="transparent" style="margin-top: 15px;" class="ion-no-padding">
       <ion-label position="stacked">Email</ion-label>
-      <ion-input type="email" [(ngModel)]="confemail" placeholder="juandelacruz@gmail.com"></ion-input>
+      <ion-input type="email"  placeholder="juandelacruz@gmail.com"></ion-input>
     </ion-item>
     <ion-item color="transparent" style="margin-bottom: 15px;" class="ion-no-padding">
       <ion-label position="floating">Password</ion-label>
-      <ion-input (keyup.enter)="custLogin()" [(ngModel)]="confpassword"  type="{{typePass}}"></ion-input>
+      <ion-input type="{{typePass}}"></ion-input>
       <ion-icon class="passwordIcon" slot="end" name="{{imgPass}}" (click)="onClickShow()"></ion-icon>
     </ion-item>
     <div style="
@@ -16,18 +16,18 @@
       <p style="
       width: 100%;
       text-align: left;"> <a style="cursor: pointer; text-decoration: none;"
-        (click)="create()"> Create an account</a></p>
+        [routerLink]="['/auth/register']"> Create an account</a></p>
       <p style="
       width: 100%;
       text-align: right;"><a style="  text-decoration: none;" [routerLink]="['/reset-password']">Forgot password?</a></p>
     </div> 
      
-     <ion-button  style=" margin-top: 18px; width: 100%;" (click)="custLogin()"> 
+     <ion-button  style=" margin-top: 18px; width: 100%;" (click)="login()"> 
       Sign in</ion-button>
      <div style=" margin-bottom: 12px; margin-top: 12px; text-align: center;"> 
        OR
      </div>
-      <ion-button fill="outline" style=" width: 100%; " (click)="onClickGoogle()" color="dark" >
+      <ion-button fill="outline" style=" width: 100%; "  color="dark" >
         <ion-icon style=" margin-right: 10px;" name="logo-google"></ion-icon>
         Sign in with google
       </ion-button>
@@ -36,5 +36,4 @@
         width: 180px;">By signing this I've agreed the <a style="  text-decoration: none;" [routerLink]="['/privacy-policy']">Privacy Policy</a></p></div>
     </ion-label>
   </div>
- </ion-content> 
- <google-adsense ></google-adsense>
+ </ion-content>  

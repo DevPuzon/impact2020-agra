@@ -4,8 +4,25 @@
   <ion-row >
     <ion-col size="12" size-sm="12" size-md="8" size-lg="8"
       offset="0" offset-sm="0" offset-md="2" offset-md="2">
-      <h4>Farmers monitoring</h4>
       <ion-row>
+        <ion-col> 
+          <ion-item>
+            <ion-label>Status</ion-label>
+            <ion-select   placeholder="All">
+              <ion-select-option value="brown">To market</ion-select-option>
+              <ion-select-option value="blonde">Lack of machinery</ion-select-option>
+              <ion-select-option value="black">Oversupply</ion-select-option>
+              <ion-select-option value="red">Good for harvest</ion-select-option>
+              <ion-select-option value="red">Lack of financial</ion-select-option>
+            </ion-select>
+            <ion-label>Region</ion-label>
+            <ion-select placeholder="All" >
+              <ion-select-option value="brown" *ngFor="let region of regions">{{region.provDesc}}</ion-select-option> 
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row >
         <ion-col size="auto" class="ion-no-padding">
           <h6>Legend:</h6>
         </ion-col>

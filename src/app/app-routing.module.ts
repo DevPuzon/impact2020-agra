@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
-const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
+const routes: Routes = [ 
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'agra',
     pathMatch: 'full'
+  },
+  {
+    path:'agra',
+    component:LandingPageComponent
   },
   {
     path: 'auth',

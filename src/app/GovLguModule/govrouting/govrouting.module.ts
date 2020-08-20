@@ -8,16 +8,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { AccountComponent } from 'src/app/FarmersModule/account/account.component';
 import { GovMainComponent } from '../gov-main/gov-main.component';
+import { DashboardLguComponent } from '../dashboard-lgu/dashboard-lgu.component';
 
 
 @NgModule({
-  declarations: [FarmerApplicantsComponent
+  declarations: [FarmerApplicantsComponent,DashboardLguComponent
   ,MonitoringComponent,GovMainComponent],
   imports: [
     CommonModule, 
     FormsModule, 
     ReactiveFormsModule,
-    IonicModule,  
+    IonicModule, 
     GovroutingRoutingModule
   ]
 })

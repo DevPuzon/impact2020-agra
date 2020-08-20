@@ -28,20 +28,61 @@
           <div class="card">
             <div class="container">
               <textarea col="20" row="10" class="input-post" placeholder="What's on you mind?"></textarea>
+              <ion-item lines="none" detail="false"> 
+                <ion-buttons slot="end">
+                  <ion-button> 
+                    <p>Add image</p>
+                  </ion-button>
+                  <ion-button> 
+                    <p>Add file</p>
+                  </ion-button>
+                  <ion-button fill="solid" color="primary"> 
+                    <p>Post</p>
+                  </ion-button>
+                </ion-buttons>
+              </ion-item>
             </div>
-            <ion-item lines="none" detail="false"> 
-              <ion-buttons slot="end">
-                <ion-button> 
-                  <p>Add image</p>
-                </ion-button>
-                <ion-button> 
-                  <p>Add file</p>
-                </ion-button>
-                <ion-button fill="solid" color="primary"> 
-                  <p>Post</p>
-                </ion-button>
-              </ion-buttons>
-            </ion-item>
+          </div>
+          <div class="card">
+            <div class="container1">
+              <ion-list>
+                <ion-item lines="full" detail="false">
+                  <h4 style="font-weight: bold;">Price Watch</h4>
+                </ion-item>
+                <ion-item lines="full" detail="false" style="width:100%"> 
+                  <ion-row style="width:100%;">
+                    <ion-col size="12">
+                      <h6 style="margin-bottom: 0px;font-weight: bold;">Manila</h6>
+                    </ion-col>
+                    <ion-col size="12">
+                      <ion-row >
+                        <ion-col size="12" size-sm="12" size-md="12" size-lg="6"> 
+                          <ion-list class="ion-no-padding" style="margin-bottom:10px" >
+                            <ion-item   style="height: 30px;" lines="none" detail="false"  *ngFor="let a of ['Malunggay','Kalabasa','Hipon','Taba ng baboy']">
+                              <p style="margin:0px ;font-weight: 300;" slot="start">{{a}}</p>
+                              <p style="margin:0px"  slot="end">₱125.00</p> 
+                            </ion-item> 
+                          </ion-list>
+                        </ion-col>
+                        <ion-col size="12" size-sm="12" size-md="12" size-lg="6">
+                          <ion-list class="ion-no-padding" style="margin-bottom:10px" >
+                            <ion-item   style="height: 30px;" lines="none" detail="false"  *ngFor="let a of ['Mango','Monggo','Talong','Papaya']">
+                              <p style="margin:0px ;font-weight: 300;" slot="start">{{a}}</p>
+                              <p style="margin:0px"  slot="end">₱125.00</p> 
+                            </ion-item> 
+                          </ion-list>
+                        </ion-col>
+                      </ion-row>
+                    </ion-col> 
+                  </ion-row>
+                </ion-item>
+                <ion-item lines="none" button detail="false">
+                  <div class="show-more">
+                    <h5>Show More</h5>
+                  </div>
+                </ion-item>
+              </ion-list>
+            </div>
           </div>
           <div  *ngFor="let maindata of maindatas"  > 
             <ion-item lines="full" button detail="false"> 

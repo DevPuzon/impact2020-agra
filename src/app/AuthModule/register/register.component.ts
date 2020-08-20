@@ -11,4 +11,10 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {}
 
+  imgPass = "eye";
+  typePass="password";
+  onClickShow(){ 
+    this.typePass = this.typePass === 'text' ? 'password' : 'text';
+    this.imgPass = this.imgPass === 'eye-off' ? 'eye' : 'eye-off';
+  }
 }
